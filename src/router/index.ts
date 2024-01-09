@@ -51,13 +51,22 @@ const routes: RouteRecordRaw[] = [
                 component: () => import(/* webpackChunkName: "form" */ '../views/form.vue'),
             },
             {
-                path: '/tabs',
-                name: 'tabs',
+                path: '/lf14',
+                name: 'lf14',
                 meta: {
-                    title: 'tab标签',
+                    title: '裂缝伸缩（14）',
                     permiss: '3',
                 },
-                component: () => import(/* webpackChunkName: "tabs" */ '../views/tabs.vue'),
+                component: () => import(/* webpackChunkName: "tabs" */ '../views/lf14.vue'),
+            },
+            {
+                path: '/lf18',
+                name: 'lf18',
+                meta: {
+                    title: '裂缝伸缩（18）',
+                    permiss: '11',
+                },
+                component: () => import(/* webpackChunkName: "tabs" */ '../views/lf18.vue'),
             },
             {
                 path: '/donate',
@@ -78,22 +87,40 @@ const routes: RouteRecordRaw[] = [
                 component: () => import(/* webpackChunkName: "permission" */ '../views/permission.vue'),
             },
             {
-                path: '/upload',
-                name: 'upload',
+                path: '/zs18',
+                name: 'zs18',
                 meta: {
-                    title: '上传插件',
-                    permiss: '6',
+                    title: '噪声18',
+                    permiss: '2',
                 },
-                component: () => import(/* webpackChunkName: "upload" */ '../views/upload.vue'),
+                component: () => import(/* webpackChunkName: "upload" */ '../views/zs18.vue'),
             },
             {
-                path: '/icon',
-                name: 'icon',
+                path: '/zs18',
+                name: 'zs18',
                 meta: {
-                    title: '自定义图标',
-                    permiss: '10',
+                    title: '噪声18',
+                    permiss: '2',
                 },
-                component: () => import(/* webpackChunkName: "icon" */ '../views/icon.vue'),
+                component: () => import(/* webpackChunkName: "upload" */ '../views/zs18.vue'),
+            },
+            {
+                path: '/zd14',
+                name: 'zd14',
+                meta: {
+                    title: '振动14',
+                    permiss: '2',
+                },
+                component: () => import(/* webpackChunkName: "upload" */ '../views/zd14.vue'),
+            },
+            {
+                path: '/zd18',
+                name: 'zd18',
+                meta: {
+                    title: '振动18',
+                    permiss: '2',
+                },
+                component: () => import(/* webpackChunkName: "icon" */ '../views/zd18.vue'),
             },
             {
                 path: '/user',
@@ -113,13 +140,13 @@ const routes: RouteRecordRaw[] = [
                 component: () => import(/* webpackChunkName: "editor" */ '../views/editor.vue'),
             },
             {
-                path: '/markdown',
-                name: 'markdown',
+                path: '/szyz',
+                name: 'szyz',
                 meta: {
-                    title: 'markdown编辑器',
-                    permiss: '9',
+                    title: '阈值设置',
+                    permiss: '2',
                 },
-                component: () => import(/* webpackChunkName: "markdown" */ '../views/markdown.vue'),
+                component: () => import( '../views/yuzhi.vue'),
             },
             {
                 path: '/export',
@@ -131,13 +158,13 @@ const routes: RouteRecordRaw[] = [
                 component: () => import(/* webpackChunkName: "export" */ '../views/export.vue'),
             },
             {
-                path: '/import',
-                name: 'import',
+                path: '/zs14',
+                name: 'zs14',
                 meta: {
-                    title: '导入Excel',
+                    title: '噪声14',
                     permiss: '2',
                 },
-                component: () => import(/* webpackChunkName: "import" */ '../views/import.vue'),
+                component: () => import(/* webpackChunkName: "import" */ '../views/zs14.vue'),
             },
         ],
     },

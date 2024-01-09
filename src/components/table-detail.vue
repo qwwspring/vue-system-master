@@ -13,12 +13,12 @@
 		{{ data.value }}
 	  </el-descriptions-item>
 	</el-descriptions>
-	<EZUIKitJs />
+	<EZUIKitJs :rowData="data" />
 
   </template>
   
   <script lang="ts">
-  import EZUIKitJs from './components/EZUIKitJs.vue'
+
 
   export default {
 	props: {

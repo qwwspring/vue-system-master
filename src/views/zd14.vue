@@ -19,7 +19,7 @@
 			  <el-button @click="queryData()">查询</el-button>
 			</h2>
 		  </div>
-		  <div class="tab-content">
+		  <div class="tab-content" style="margin:10px 0;">
 			<h2>
 			  <el-button @click="showif(1)">图表</el-button>
 			  <el-button @click="showif(0)">表格</el-button>
@@ -54,12 +54,12 @@
   <script setup>
   import moment from 'moment';
   import { ref, onMounted, onBeforeMount } from 'vue';
-  import { fetchData } from '../api/index';
+  import { fetchData5 } from '../api/index';
   import * as echarts from 'echarts';
   import TableDetail from '../components/table-detail.vue';
 
   const tabs = ref([
-	{ title: '伸缩裂缝计（14号桩）', dataList: null, startTime: null, endTime: null },
+	{ title: '振动传感器（14号桩）', dataList: null, startTime: null, endTime: null },
   ]);
   
   let viewflag = ref(1); // 默认显示图表
@@ -84,7 +84,7 @@
   
   const getData = async () => {
 	try {
-	  let res = await fetchData();
+	  let res = await fetchData5();
 	  if (res.data.length > 0) {
 		res.data.forEach((item) => {
 		  item.date = moment(item.date).format('YYYY-MM-DD HH:mm:ss');

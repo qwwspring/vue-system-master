@@ -64,19 +64,19 @@ const items = [
     },
     {
         icon: 'Calendar',
-        index: '/tabs',
+        index: '/lf14',
         title: '伸缩裂缝计（14号桩）',
         permiss: '2',
     },
     {
         icon: 'DocumentCopy',
-        index: '/charts',
+        index: '/lf18',
         title: '伸缩裂缝计（18号桩）',
         permiss: '11',
     },
     {
         icon: 'Edit',
-        index: '/import',
+        index: '/zs14',
         title: '噪声传感器（14号桩）',
         permiss: '2',
         // subs: [
@@ -111,21 +111,27 @@ const items = [
     },
     {
         icon: 'Setting',
-        index: '/upload',
+        index: '/zs18',
         title: '噪声传感器（18号桩）',
         permiss: '2',
     },
     {
         icon: 'PieChart',
-        index: '/charts',
+        index: '/zd14',
         title: '振动传感器（14号桩）',
-        permiss: '11',
+        permiss: '2',
     },
     {
         icon: 'PieChart',
-        index: '/charts',
+        index: '/zd18',
         title: '振动传感器（18号桩）',
-        permiss: '11',
+        permiss: '2',
+    },
+    {
+        icon: 'Setting',
+        index: '/szyz',
+        title: '阈值设置',
+        permiss: '2',
     },
 ];
 

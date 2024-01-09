@@ -1,6 +1,12 @@
 <script lang="ts" setup>
 import EZUIKit from 'ezuikit-js'
 import { onMounted } from 'vue'
+import moment from 'moment';
+const props = defineProps({
+  rowData:{
+    type:Object
+  }
+})
 
 interface IPlayer {
   play: Function
@@ -94,12 +100,20 @@ const destroy = () => {
   })
 }
 
+
+console.log("父组件传值",props.rowData)
 onMounted(() => {
-  console.group('mounted 组件挂载完毕状态===============》')
+  console.log("父组件传值",props.rowData)
+  let startTime = moment(props.rowData.startTime).subtract(10,'seconds').format('yyyyMMDDHHmmss')
+  let endTime = moment(props.rowData.endTime).add(10,'seconds').format('yyyyMMDDHHmmss')
+  console.log("开始时间",startTime)
+  console.log("结束时间",endTime)
+  // 摄像头变化
+  let code = 'AX5155206'
   player = new EZUIKit.EZUIKitPlayer({
           id: 'video-container', // 视频容器ID
           accessToken: "at.5174zfzl9quo2y401akabql36akk1688-45hcljmbk3-0nk5bj7-obtnvlyp7",
-          url: 'ezopen://open.ys7.com/AX5155206/1.rec?begin=202401060801000&end=20240806011510',
+          url: `ezopen://open.ys7.com/${code}/1.rec?begin=${startTime}&end=${endTime}`,
           // simple - 极简版; pcLive-pc直播；pcRec-pc回放；mobileLive-移动端直播；mobileRec-移动端回放;security - 安防版;voice-语音版;
           //template: 'simple',
           plugin: ['talk'], // 加载插件，talk-对讲

@@ -7,9 +7,21 @@ import { usePermissStore } from './store/permiss';
 import 'element-plus/dist/index.css';
 import './assets/css/icon.css';
 
+import moment from 'moment';
+
+
+// main.ts
+
+// Import Element Plus styles and components if you are using Element Plus
+
+
+
+
 const app = createApp(App);
 app.use(createPinia());
 app.use(router);
+
+app.config.globalProperties.moment = moment;
 
 // 注册elementplus图标
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
